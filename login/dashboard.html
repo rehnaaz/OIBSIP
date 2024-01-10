@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="/js/auth.js"></script>
+    <script defer src="/init.js"></script>
+    <script src="https://kit.fontawesome.com/1cf483120b.js" crossorigin="anonymous"></script>
+    <title>Login Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen2">
+        <h1>Welcome to the Dashboard</h1>
+        <p class="text-center"><a href="./home.html" class="logout">Log Out</a></p>
+        </div>
+        <div>
+            <div class="user-welcome" id="userWelcome">
+                <h2>Hello ! </h2>
+            </div>
+        </div>
+        <script>
+            // Retrieve username from localStorage
+            const username = localStorage.getItem('username');
+
+            // Display the username
+            const usernameDisplay = document.getElementById('usernameDisplay');
+            if (username) {
+                usernameDisplay.textContent = username;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
